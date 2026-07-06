@@ -55,6 +55,17 @@ GEMINI_API_KEY=your_key_here
 
 Restart RStudio after saving the file. Never commit `.Renviron`, an API key, or rsconnect deployment credentials. The included `.gitignore` blocks these files.
 
+
+## GitHub Pages project page
+
+This repository includes a static portfolio landing page (`index.html`) that can be published with GitHub Pages. It documents the project, links to the source code, and previews the dashboard. GitHub Pages does **not** run the R Shiny application itself.
+
+To enable it: **Repository Settings → Pages → Deploy from a branch → `main` / `(root)` → Save**. Once published, the project page will be available at:
+
+```text
+https://ujwal721.github.io/Clinical_Trial_Simulation/
+```
+
 ## Deploying
 
 GitHub stores the source code and documentation. A live Shiny app requires a Shiny-capable host such as shinyapps.io or Posit Connect Cloud; GitHub Pages cannot execute an R Shiny server.
@@ -68,6 +79,9 @@ For a public shinyapps.io demonstration, deploy `app.R` without an API key. The 
 ├── app.R
 ├── assets/
 │   └── boin-dashboard-preview.png
+├── index.html
+├── styles.css
+├── .nojekyll
 ├── .gitignore
 ├── LICENSE
 └── README.md

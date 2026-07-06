@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Phase I dose-finding dashboard comparing a BOIN-style interval approach with the traditional 3+3 design.">
+  <title>Phase I Dose-Finding Dashboard | Ujwal Jadhav</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2357068C'/%3E%3Cpath d='M18 17h14c9 0 15 5 15 14 0 6-3 10-8 12l9 13H36l-7-10h-3v10H18V17Zm8 8v13h6c4 0 7-2 7-6.5S36 25 32 25h-6Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Phase I Dose-Finding Dashboard home">
+        <span class="brand-mark" aria-hidden="true">P1</span>
+        <span>Clinical Trial Simulation</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#methods">Methods</a>
+        <a href="#project">Dashboard</a>
+        <a class="nav-github" href="https://github.com/ujwal721/Clinical_Trial_Simulation" target="_blank" rel="noreferrer">View source <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PHASE I CLINICAL-TRIAL METHODS</p>
+          <h1>Make dose-finding decisions visible.</h1>
+          <p class="hero-text">An educational Shiny dashboard for exploring a BOIN-style interval approach alongside the traditional 3+3 design—through simulation, dose paths, allocation patterns, and MTD selection.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#project">Explore the project <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/ujwal721/Clinical_Trial_Simulation" target="_blank" rel="noreferrer">Open GitHub repository <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="small-note"><strong>Educational simulation only.</strong> Not clinical decision support and not for patient-specific treatment decisions.</p>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of dose levels and trial progression">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="trial-card">
+            <div class="trial-card-top">
+              <span>Trial pathway</span>
+              <span class="pill">Simulated</span>
+            </div>
+            <div class="dose-ladder" aria-hidden="true">
+              <span class="dose active">D1</span>
+              <span class="connector"></span>
+              <span class="dose active">D2</span>
+              <span class="connector"></span>
+              <span class="dose focus">D3</span>
+              <span class="connector muted"></span>
+              <span class="dose">D4</span>
+              <span class="connector muted"></span>
+              <span class="dose">D5</span>
+            </div>
+            <div class="decision-panel">
+              <div>
+                <span class="label">Observed DLT rate</span>
+                <strong>0.25</strong>
+              </div>
+              <div>
+                <span class="label">Decision</span>
+                <strong class="stay">Stay</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT THE PROJECT SHOWS</p>
+          <h2>From trial rules to interpretable pathways.</h2>
+          <p>Static tables can hide the practical consequences of dose escalation. This project turns the decision process into a readable, adjustable teaching tool.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Configure toxicity scenarios</h3>
+            <p>Adjust dose-level toxicity, target toxicity, cohort size, and maximum enrollment to explore realistic Phase I settings.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Trace the dose pathway</h3>
+            <p>See how observed DLTs shape escalation, staying, de-escalation, and dose elimination over a simulated trial.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Compare design behavior</h3>
+            <p>Contrast BOIN-style and 3+3 allocation, MTD selection, overdose exposure, and total patient enrollment across repeated simulations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods" class="section methods-section">
+      <div class="container methods-grid">
+        <div>
+          <p class="eyebrow">METHODS NOTE</p>
+          <h2>Two ways to think about early dose escalation.</h2>
+          <p>The dashboard is built for learning and demonstration. It makes the underlying logic tangible without claiming protocol-ready clinical decision support.</p>
+        </div>
+        <div class="method-list">
+          <article>
+            <span class="method-icon">B</span>
+            <div>
+              <h3>BOIN-style interval rule</h3>
+              <p>A simplified educational interval approach compares the observed DLT rate with lower and upper toxicity boundaries to guide escalation, staying, or de-escalation.</p>
+            </div>
+          </article>
+          <article>
+            <span class="method-icon">3+3</span>
+            <div>
+              <h3>Traditional 3+3 rule</h3>
+              <p>A familiar cohort-based design that uses observed DLT counts among groups of three participants to determine whether to escalate, expand, or stop.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="section project-section">
+      <div class="container">
+        <div class="project-header">
+          <div>
+            <p class="eyebrow">INTERFACE PREVIEW</p>
+            <h2>Interactive BOIN and 3+3 visualizer.</h2>
+          </div>
+          <a class="text-link" href="https://github.com/ujwal721/Clinical_Trial_Simulation/blob/main/app.R" target="_blank" rel="noreferrer">Read the Shiny app source <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="dashboard-frame">
+          <img src="assets/boin-dashboard-preview.png" alt="Preview of the BOIN dashboard interface with controls, trial path, and toxicity chart.">
+          <figcaption>Dashboard preview: scenario controls, dose-path visualization, allocation summaries, and design comparison views.</figcaption>
+        </figure>
+        <div class="project-callout">
+          <div>
+            <span class="eyebrow">INTERACTIVE VERSION</span>
+            <h3>The R Shiny simulator is hosted separately from this static project page.</h3>
+            <p>GitHub Pages documents the project and its source. A Shiny-capable host is required to run the live simulation server.</p>
+          </div>
+          <a class="button button-dark" href="https://github.com/ujwal721/Clinical_Trial_Simulation" target="_blank" rel="noreferrer">View the code <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section">
+      <div class="container results-grid">
+        <div class="results-copy">
+          <p class="eyebrow">PORTFOLIO CONTEXT</p>
+          <h2>A health-data project built around transparency.</h2>
+          <p>Rather than presenting a single “best” dose or rule, the dashboard foregrounds assumptions, observed toxicity, and trade-offs—important habits for clinical research analytics and biostatistical communication.</p>
+          <a class="text-link" href="https://github.com/ujwal721/Clinical_Trial_Simulation/blob/main/README.md" target="_blank" rel="noreferrer">Read the full project documentation <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="stats-grid" aria-label="Project highlights">
+          <div class="stat-card"><strong>2</strong><span>dose-finding designs</span></div>
+          <div class="stat-card"><strong>3–8</strong><span>configurable dose levels</span></div>
+          <div class="stat-card"><strong>100–3,000</strong><span>simulation iterations</span></div>
+          <div class="stat-card"><strong>R Shiny</strong><span>interactive application stack</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Clinical Trial Simulation</strong>
+        <p>Built by Ujwal Jadhav · MPH, Biostatistics · NYU School of Global Public Health</p>
+      </div>
+      <a href="https://github.com/ujwal721/Clinical_Trial_Simulation" target="_blank" rel="noreferrer">GitHub repository <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>
