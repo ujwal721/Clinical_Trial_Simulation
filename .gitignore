@@ -1,0 +1,19 @@
+# Secrets and local environment settings
+.Renviron
+*.Renviron
+.env
+*.key
+*.pem
+
+# RStudio and R session files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Deployment metadata
+rsconnect/
+
+# Operating system files
+.DS_Store
+Thumbs.db
