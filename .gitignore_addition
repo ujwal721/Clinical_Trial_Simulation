@@ -1,0 +1,7 @@
+# Keep deployment assets/version-control history clean
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Renviron
+*.Renviron
